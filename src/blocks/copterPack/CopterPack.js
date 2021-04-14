@@ -11,11 +11,15 @@ import Reviews from '../../components/reviews/Reviews';
 function CopterPack() {
   return (
     <div className={s.wrapper}>
-      <BlockTitle
-        title = 'Фотосессия в вертолете'
-      />
-      <img src={copterPackBg} alt=""/>
+      <div className={s.title}>
+        <BlockTitle
+          className = {s.blockTitle}
+          title='Фотосессия в вертолете'
+        />
+      </div>
+      <img className={s.img} src={copterPackBg} alt=""/>
       <div className={s.description}>
+        <p className={s.text}>Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты!</p>
         <div className={s.item}>
           <img src={time} alt=""/>
           <p>3 часа съемки</p>
@@ -32,8 +36,8 @@ function CopterPack() {
           <img src={dialogs} alt=""/>
           <p>Готовы ответить на любые вопросы</p>
         </div>
+        <Reviews/>
       </div>
-      <Reviews/>
     </div>
   );
 }

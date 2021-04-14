@@ -1,0 +1,53 @@
+@import '../../styles/sass/abstracts/mixins.scss';
+@import '../../styles/sass/abstracts/vars.scss';
+.container {
+    padding: 40px 15px 0 15px;
+    @media screen and (min-width: 576px) {
+        padding: 40px 35px 0 35px;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 40px 50px 50px 50px;
+    }
+    @media screen and (min-width: 1280px) {
+        padding: 50px 0 50px 0;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    .wrapper {
+        max-width: 770px;
+        .title {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            @media screen and (min-width: 1280px) {
+                justify-content: flex-start;
+            }
+            .blockTitle {
+                @include fontStyle (26px, 400, 32px, $textColor);
+                text-align: center;
+                max-width: 280px;
+                @media screen and (min-width: 1280px) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .date {
+        padding: 0 20px;
+        @media screen and (min-width: 1280px) {
+            border: 1px solid #C7C7C7;
+        }
+        .dateTime {
+            @include fontStyle (18px, 400, 26px, $textColor);
+            text-align: center;
+            padding: 16px 0 20px 0;
+            border-top: 0.5px solid $secondaryColor;
+            @media screen and (min-width: 1280px) {
+                border-top: none;
+            }
+            @media screen and (min-width: 576px) {
+                text-align: left;
+            }
+        }
+    }
+}

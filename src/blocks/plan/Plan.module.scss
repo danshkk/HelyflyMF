@@ -1,0 +1,25 @@
+@import '../../styles/sass/abstracts/mixins.scss';
+@import '../../styles/sass/abstracts/vars.scss';
+
+.containerBg {
+    background-image: url(../../assets/image/planBg.png);
+    background-size: cover;
+    min-height: 423px;
+    background-position-x: 56%;
+}
+.cont {
+    margin: 50px 0 40px 0;
+    @media screen and (min-width: 1280px) {
+        display: none;
+    }
+    .wrap {
+        width: 274px;
+        height: 380px;
+        border: 1px solid #C7C7C7;
+        margin: 0 auto;
+        @media screen and (min-width: 576px)
+        {
+            width: 400px;
+        }
+    }
+}
