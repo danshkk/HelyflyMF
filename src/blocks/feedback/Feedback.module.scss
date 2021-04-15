@@ -1,0 +1,31 @@
+@import '../../styles/sass/abstracts/mixins.scss';
+@import '../../styles/sass/abstracts/vars.scss';
+
+.container {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 576px) {
+        padding: 0 35px;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 0 50px;
+    }
+    @media screen and (min-width: 1280px) { 
+        padding: 70px 0 0 0;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    .title {
+        @include fontStyle (20px, 400, 30px, $textColor);
+        margin-bottom: 50px;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+    }
+    .link {
+        align-self: center;
+        @include fontStyle (17px, 400, 24px, $linkColor);
+    }
+}

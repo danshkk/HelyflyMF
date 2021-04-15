@@ -6,19 +6,92 @@
     background-size: cover;
     min-height: 423px;
     background-position-x: 56%;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: 1280px) {
+        min-height: 509px;
+        background-position-x: 54%;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: none;
+        @media screen and (min-width: 1280px) {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .plans {
+            width: 420px;
+            min-height: 469px;
+            border: 1px solid #C7C7C7;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 30px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .inner {
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                .title {
+                    @include fontStyle(18px, 400, 27px, $textColor);
+                }
+                .subtitle {
+                    @include fontStyle(18px, 400, 27px, $textColor);
+                }
+                .name {
+                    @include fontStyle(18px, 400, 22px, $textColor);
+                }
+                .respons {
+                    @include fontStyle(16px, 400, 24px, $textColor);
+                }
+                .link {
+                    @include fontStyle(14px, 400, 21px, $linkColor);
+                }
+            }
+            img {
+                width: 67px;
+                height: 67px;
+            }
+            .circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 61px;
+                height: 61px;
+                background: #FC9B09;
+                border-radius: 50px;
+                @include fontStyle(35px, 700, 51px, $primaryColor);
+            }
+        }
+    }
 }
+
 .cont {
     margin: 50px 0 40px 0;
+
     @media screen and (min-width: 1280px) {
         display: none;
     }
+
     .wrap {
         width: 274px;
         height: 380px;
         border: 1px solid #C7C7C7;
         margin: 0 auto;
-        @media screen and (min-width: 576px)
-        {
+        @media screen and (min-width: 576px) {
             width: 400px;
         }
     }
