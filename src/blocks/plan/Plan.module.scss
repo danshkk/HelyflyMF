@@ -79,20 +79,67 @@
     }
 }
 
-.cont {
+.mobContainer {
     margin: 50px 0 40px 0;
 
     @media screen and (min-width: 1280px) {
         display: none;
     }
 
-    .wrap {
-        width: 274px;
-        height: 380px;
-        border: 1px solid #C7C7C7;
-        margin: 0 auto;
+    .mobPlan {
+       max-width: 274px;
+       min-height: 380px;
+       border: 1px solid #C7C7C7;
+       margin: 0 auto;
+       padding: 20px 10px 20px 10px;
         @media screen and (min-width: 576px) {
             width: 400px;
+        }
+        .mobItem {
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .avatar {
+                width: 67px;
+                height: 67px;
+            }
+            .circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 61px;
+                height: 61px;
+                background: #FC9B09;
+                border-radius: 50px;
+                @include fontStyle(35px, 700, 51px, $primaryColor);
+            }
+            .inner {
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                .title {
+                    @include fontStyle(18px, 400, 27px, $textColor);
+                }
+                .subtitle {
+                    @include fontStyle(18px, 400, 27px, $textColor);
+                }
+                .name {
+                    @include fontStyle(18px, 400, 22px, $textColor);
+                }
+                .respons {
+                    @include fontStyle(16px, 400, 24px, $textColor);
+                }
+                .link {
+                    @include fontStyle(14px, 400, 21px, $linkColor);
+                }
+                .title {
+
+                }
+
+            }
         }
     }
 }

@@ -47,7 +47,9 @@
         @media screen and (min-width: 768px) {
             align-self: flex-end;
         }
-        img {}
+        img {
+            margin-right: 5px;
+        }
 
         .innerText {
             @include fontStyle(14px, 400, 21px, $textColorLight);
